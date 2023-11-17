@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css2?family=Asap&display=swap' rel="stylesheet">
+  <title>Portfólio Yan Damasco</title>
+  <style>
+    .my-font {
+      font-family: 'Urbanist', sans-serif;
+    }
+
+    .second-font {
+      font-family: 'Asap', sans-serif;
+    }
+
+    .primary-background-color {
+       background-color: #ac89ce;
+    }
+
+    .primary-color {
+      color: #57297c;
+      font-weight: bold;
+    }
+
+    .secondary-backgroung-color {
+      background-color: #6d3d98;
+    }
+
+    .no-link-color {
+      color: #6d3d98 !important;
+    }
+
+    .item-options:hover {
+      background-color: #8d5fb6 !important;
+      border-radius: 10px;
+    }
+
+    .button-border {
+      border: none;
+    }
+
+    .navbar-item:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+
+    .navbar-item:focus {
+      background-color: transparent !important;
+      color: inherit !important;
+    }
+
+    .navbar-item:visited {
+      background-color: transparent !important;
+      color: inherit !important;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar primary-background-color is-fixed-top" style="box-shadow: 3px 5px 4px #0c0c0c3b;">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <h1 class="is-size-3 second-font py-3 px-5 no-link-color" style="font-weight: bold;">Dev Yan</h1>
+        </a>
+        <a class="navbar-burger" id="dev-logo">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="navbar-menu py-5 second-font" id="nav-links">
+        <div class="navbar-end primary-color">
+          <a class="navbar-item is-size-5 item-options" style="margin-right: 2%;" href="#section_inicio">Início</a>
+          <a class="navbar-item is-size-5 item-options" style="margin-right: 2%;" href="#section_sobre">Sobre</a>
+          <a class="navbar-item is-size-5 item-options" style="margin-right: 2%;" href="#section_habilidades">Habilidades</a>
+          <a class="navbar-item is-size-5 item-options" style="margin-right: 2%;" href="#section_projetos">Projetos</a>
+          <a class="navbar-item is-size-5 item-options" style="margin-right: 2%;" href="#section_contato">Contato</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main style="background-color: #d1c5e2;">
+    <section class="section" style="padding: 14% 0" id="section_inicio">
+      <div class="container">
+        <div class="columns is-align-items-center" style="justify-content: space-around;">
+          <div class="column is-6 has-text-justified is-size-4 my-font" style="line-height: 140%;">
+            <h1 class="is-size-2 second-font has-text-centered" style="font-weight: bolder; color: #9a74bd; margin-top: 10%;">
+              DEVELOPER
+              <span style="color: #6d3d98;">
+                FRONTEND
+              </span>
+            </h1>
+            <br>
+            <p class="ml-4 mr-4"><span style="color: #6d3d98; font-weight: bold;">Yan Damasco</span>, nascido em <span style="color: #9a74bd; font-weight: bold;">Florianópolis</span>, profissional de desenvolvimento web. Apaixonado por criar experiências digitais incríveis,estou empenhado em transformar ideias em realidade. Explore meu portfólio para conhecer meus trabalhos e entrar em meu <span style="color: #6d3d98; font-weight: bold;">universo</span> de design e desenvolvimento.
+            </p>
+            <div class="py-5" style="display: flex; justify-content: space-around;">
+              <button
+                class="button primary-background-color second-font is-rounded is-medium button-border"
+                style="font-weight: bold;color: #6d3d98; box-shadow: 3px 5px 4px #0c0c0c3b;">Download
+                CV
+              </button>
+              <button
+                class="button secondary-backgroung-color second-font is-rounded is-medium button-border"
+                style="font-weight: bold;color: #bea4d7; box-shadow: 3px 5px 4px #0c0c0c3b;">Contrate-me
+              </button>
+            </div>
+          </div>
+          <div class="column is-4">
+            <img src="./assets/character.png" class="is-square" alt="firt-image" style="max-height: 300px;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="padding: 15% 0" id="section_sobre">
+    
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

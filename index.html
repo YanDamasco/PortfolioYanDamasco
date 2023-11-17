@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./assets/character.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css2?family=Asap&display=swap' rel="stylesheet">
+  <script src="index.js"></script>
+  <script src="https://kit.fontawesome.com/690144bb0d.js" crossorigin="anonymous"></script>
+
+  <title>Portfólio Yan Damasco</title>
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+    body, footer {
+      width: 100vw;
+      background: linear-gradient(90deg, #b5a6ca 0%, #c9bcdb 25%, #d1c5e2 50%, #c9bcdb 75%, #b5a6ca 100%);
+    }
+    /* vvvvvvvvvv Colors vvvvvvvvvv */
+    :root {
+      --background-body: #d1c5e2;
+      --light-purple: #ac89ce;
+      --medium-purple: #6d3d98;
+      --medium-purple-secondary: #6d3d98;
+      --dark-purple: #522576;
+      --shadow: #0c0c0c3b;
+    }
+    .color-background-body {
+      background-color: var(--background-body);
+    }
+    .color-light-purple {
+      color: var(--light-purple);
+    }
+    .background-light-purple {
+      background-color: var(--light-purple);
+    }
+    .color-medium-purple {
+      color: var(--medium-purple);
+    }
+    .background-medium-purple {
+      background-color: var(--medium-purple);
+    }
+    .color-medium-purple-secondary {
+      color: var(--medium-purple-secondary);
+    }
+    .background-medium-purple-secondary {
+      background-color: var(--medium-purple-secondary);
+    }
+    .color-dark-purple {
+      color: var(--dark-purple);
+    }
+    .background-dark-purple {
+      background-color: var(--dark-purple);
+    }
+    .color-background {
+      background-color: var(--background-body);
+    }
+
+    .op-25 {
+      opacity: 25%;
+    }
+    /* ^^^^^^^^^^ Colors ^^^^^^^^^^ */
+
+    .button_size {
+      width: 180px;
+    }
+    .border_rounded {
+      border-radius: 10px;
+    }
+    .auto-padding {
+      padding: 15% 0 5% 0;
+    }
+    .auto-padding-2 {
+      padding: 10% 0 5% 0;
+    }
+    .mt-10 {
+      margin-top: 10%;
+    }
+    .mt-8 {
+      margin-top: 8%;
+    }
+    .mb-8 {
+      margin-bottom: 8%;
+    }
+    .mb-10 {
+      margin-bottom: 10%;
+    }
+    .pt-8 {
+      padding-top: 8%;
+    }
+
+    .photo-height {
+      max-height: 300px;
+    }
+    .photo_width {
+      max-width: 300px;
+    }
+
+    .animation_button_1:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+      cursor:pointer;
+      color: var(--light-purple);
+    }
+    .animation_button_1:not(hover) {
+      transition: 0.4s;
+    }
+    .button_1_focus:focus {
+      color: var(--light-purple);
+    }
+    .button_2_focus:focus {
+      color: var(--medium-purple);
+    }
+
+    .animation_button_2:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+      cursor:pointer;
+      color: var(--medium-purple);
+    }
+    .animation_button_2:not(hover) {
+      transition: 0.4s;
+    }
+
+    .box-shadow {
+      box-shadow: 3px 5px 4px var(--shadow);
+    }
+    .primary-font {
+      font-family: 'Urbanist', sans-serif;
+    }
+    .secondary-font {
+      font-family: 'Asap', sans-serif;
+    }
+
+    .header-item-hover:hover {
+      transform: scale(1.2);
+      transition: 0.4s;
+      color: var(--light-purple) !important;
+      background-color: var(--medium-purple) !important;
+    }
+    .header-item-hover:not(hover) {
+      transition: 0.4s;
+      color: var(--medium-purple-secondary);
+      background-color: var(--light-purple);
+    }
+
+    .animation_abilities:not(hover) {
+      transition: 0.4s;
+    }
+
+    .animation_abilities:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+      cursor:pointer;
+    }
+
+    .no-border {
+      border: none;
+    }
+
+    .border_round {
+      border-radius: 30px;
+    }
+
+    .flip_image {
+      transform: scaleX(-1);
+    }
+
+    .icon_size {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    .margin_sides {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    
+    .cursor_pointer {
+      cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+
+
+.container_projects {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.container_projects .card {
+  position: relative;
+  max-width: 400px;
+  height: 280px;
+  background-color: var(--light-purple);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px rgba(0,0,0,0,5);
+  transition: 0.6s ease-in-out;
+  border-radius: 20px;
+}
+
+.container_projects .card:hover {
+  height: 420px;
+}
+
+.container_projects .card .imgBx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  left: 53px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0,5);
+}
+
+.container_projects .card .imgBx img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.container_projects .card .content {
+  position: relative;
+  top: -25px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.container_projects .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+.imgBx h2 {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Asap', sans-serif;
+  font-weight: bold;
+  color: var(--dark-purple);
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar is-fixed-top background-light-purple box-shadow">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <h1 class="is-size-3 secondary-font py-3 px-5 color-medium-purple-secondary has-text-weight-bold">
+            Dev Yan
+          </h1>
+        </a>
+        <a class="navbar-burger" id="dev-logo">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+        <div class="navbar-menu py-5" id="nav-links">
+          <div class="navbar-end secondary-font is-size-5 has-text-weight-bold">
+            <a class="navbar-item header-item-hover mr-4 border_rounded" href="#section_inicio">Início</a>
+            <a class="navbar-item header-item-hover mr-4 border_rounded" href="#section_sobre">Sobre</a>
+            <a class="navbar-item header-item-hover mr-4 border_rounded" href="#section_habilidades">Habilidades</a>
+            <a class="navbar-item header-item-hover mr-4 border_rounded" href="#section_projetos">Projetos</a>
+            <a class="navbar-item header-item-hover mr-4 border_rounded" href="#section_contato">Contato</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="section auto-padding" id="section_inicio">
+      <div class="container">
+        <div class="columns is-align-items-center is-flex is-justify-content-space-around">
+          <div class="column is-6 has-text-justified is-size-4 primary-font">
+            <h1 class="is-size-2 secondary-font has-text-centered has-text-weight-bold color-light-purple mt-10">
+              DEVELOPER <span class="color-medium-purple">FRONTEND</span>
+            </h1>
+            <p class="ml-4 mr-4 pt-8">
+              <span class="color-medium-purple has-text-weight-bold">Yan Damasco</span>, nascido em <span class="color-medium-purple has-text-weight-bold">Florianópolis</span>, profissional de desenvolvimento web. Apaixonado por criar experiências digitais incríveis, estou empenhado em transformar ideias em realidade. Explore meu portfólio para conhecer meus trabalhos e entrar em meu <span class="color-medium-purple has-text-weight-bold">universo</span> de design e desenvolvimento.
+            </p>
+            <div class="py-5 is-flex is-justify-content-space-around">
+              <a class="button background-medium-purple color-light-purple secondary-font is-rounded is-medium no-border has-text-weight-bold box-shadow animation_button_1 button_focus" href="Curriculo_Yan_Damasco.pdf" download>
+                Download CV
+              </a>
+              <a class="button background-light-purple color-medium-purple secondary-font is-rounded is-medium no-border has-text-weight-bold box-shadow animation_button_2 button_2_focus" href="mailto:yandamascoprofissional@gmail.com">
+                Contrate-me
+              </a>
+            </div>
+          </div>
+          <div class="is-4">
+            <img src="./assets/character.png" class="photo-height" alt="Astronauta no notebook">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section auto-padding-2" id="section_sobre">
+      <div class="container">
+        <div class="columns is-align-items-center is-flex is-justify-content-space-between">
+          <div class="is-4">
+            <img src="./assets/character2.png" alt="Astronauta no foguete" class="flip_image photo-width">
+          </div>
+        <div class="column is-6 has-text-centered is-size-4 primary-font ml-4 mr-4">
+          <div>
+            <h1 class="is-size-2 secondary-font has-text-centered has-text-weight-bold color-light-purple"><span class="color-medium-purple">SOBRE</span> MIM</h1>
+          </div>
+          <p class="pt-8">
+            Meu nome é 
+            <span class="color-medium-purple has-text-weight-bold">Yan Damasco</span>, tenho 23 anos e sou natural de 
+            <span class="color-medium-purple has-text-weight-bold">Florianópolis</span>. Desde que concluí o ensino médio, sempre tive clareza de que minha futura vocação estava na área de 
+            <span class="color-medium-purple has-text-weight-bold">Desenvolvimento Web</span>.<br><br>Atualmente, atuo como programador front-end, dedicado a aprimorar a experiência do usuário na web. Empenhado em expandir continuamente meus conhecimentos e habilidades, com o objetivo de me tornar um 
+            <span class="color-medium-purple has-text-weight-bold">Desenvolvedor Full-stack</span>.<br><br> Nas horas vagas, estudo programação voltada a <span class="color-medium-purple has-text-weight-bold">desenvolvimento de jogos</span>, assim como <span class="color-medium-purple has-text-weight-bold">Ilustração Digital</span>, <span class="color-medium-purple has-text-weight-bold">Design</span> e estudo de <span class="color-medium-purple has-text-weight-bold">Motores Gráficos</span>, como Unity e Unreal Engine 5.
+          </p>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="section auto-padding-2" id="section_habilidades">
+        <div class="mb-10">
+          <h1 class="is-size-2 secondary-font has-text-centered has-text-weight-bold color-medium-purple">HABILIDADES</h1>
+        </div>
+          <div class="columns is-align-items-center is-flex is-justify-content-space-around margin_sides background-light-purple border_rounded pt-4 pb-4 box-shadow">
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">HTML</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/html.png" class="icon_size">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">CSS</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/css.png" class="icon_size">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">JavaScript</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/javascript.png" class="icon_size border_round">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">React</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/react.png" class="icon_size border_round">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">Bulma</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/bulma.png" class="icon_size border_round">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">Bootstrap</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/bootstrapIcon.avif" class="icon_size border_round">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">GIT</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/git.png" class="icon_size">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">GitHub</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/github.png" class="icon_size">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">MySQL</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/mysql.png" class="icon_size">
+              </div>
+            </div>
+            <div class="column animation_abilities">
+              <h1 class="is-size-4 primary-font has-text-centered mb-5 has-text-weight-bold color-dark-purple">LUA</h1>
+              <div class="is-flex is-justify-content-center">
+                <img src="./assets/icons/lua.png" class="icon_size">
+              </div>
+            </div>
+          </div>
+    </section>
+    <section class="section auto-padding-2" id="section_projetos">
+      <div class="mb-8">
+        <h1 class="is-size-2 secondary-font has-text-centered has-text-weight-bold color-medium-purple">PROJETOS</h1>
+      </div>
+      <div class="container_projects">
+        <div class="card box-shadow cursor_pointer" onclick="openPortfolioProject()">
+          <div class="imgBx">
+            <img src="./assets/projeto1.png" alt="">
+            <h2 class="primary-font">Portfólio Base</h2>
+          </div>
+          <div class="content">
+            <p class="secondary-font is-size-5">
+              Projeto focado em desenvolver um portfólio base para pessoas que buscam mostrar ao mundo um pouco de seu trabalho.
+            </p>
+          </div>
+        </div>
+        <div class="card box-shadow cursor_pointer" onclick="openCloneNetflix()">
+          <div class="imgBx">
+            <img src="./assets/projeto2.png" alt="">
+            <h2 class="primary-font">Clone Netflix</h2>
+          </div>
+          <div class="content">
+            <p class="secondary-font is-size-5">
+              Projeto que busca replicar as principais funções de um aplicativo de streaming, como adquirir dados de uma API e renderizá-los no site.
+            </p>
+          </div>
+        </div>
+        <div class="card box-shadow cursor_pointer" onclick="openEcoNabo()">
+          <div class="imgBx">
+            <img src="./assets/projeto3.png" alt="">
+            <h2 class="primary-font">EcoNabo</h2>
+          </div>
+          <div class="content">
+            <p class="secondary-font is-size-5">
+              Jogo e Site criados como projeto final do curso Programação de Jogos e Sites, pelo Comitê para Democratização da Informática de Santa Catarina.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section auto-padding-2" id="section_contato">
+      <div class="container">
+        <div class="columns is-align-items-center is-flex is-justify-content-space-between">
+          <div class="column is-5">
+            <img src="./assets/character3.png" alt="Astronauta com planeta" class="photo-width">
+          </div>
+          <div class="column is-5 has-text-centered is-size-4 primary-font ">
+            <div>
+              <h1 class="is-size-2 secondary-font has-text-weight-bold color-medium-purple">CONTATO</h1>
+            </div>
+          <div class="mt-10">
+            <button onclick="openLinkedin()" class="button background-medium-purple color-light-purple secondary-font is-rounded is-medium no-border has-text-weight-bold box-shadow animation_button_1 button_size button_1_focus">
+              LinkedIn <i class="fa-brands fa-linkedin ml-2"></i>
+            </button></br>
+            <button onclick="openGithub()" class="button background-light-purple color-medium-purple secondary-font is-rounded is-medium no-border has-text-weight-bold box-shadow animation_button_2 mt-5 button_size button_2_focus">
+              GitHub <i class="fa-brands fa-github ml-2"></i>
+            </button></br>
+            <button onclick="openWhatsapp()" class="button background-medium-purple color-light-purple secondary-font is-rounded is-medium no-border has-text-weight-bold box-shadow animation_button_1 mt-5 button_size button_1_focus">
+              Whatsapp <i class="fa-brands fa-whatsapp ml-2"></i>
+            </button></br>    
+            <h2 class="mt-5 color-medium-purple"><span class="color-dark-purple has-text-weight-bold">Email:</span> yandamascoprofissional@gmail.com</h2>        
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="has-text-centered pb-4">
+      <p>2023 &copy; Todos os direitos reservados.</p>
+      <p>Arts designed by - CatalystStuff</p>
+      <a href="https://catalystvibes.dribbble.com/" target="_blank" class="color-medium-purple animation_button_2">catalystvibes.dribbble.com/</a>
+    </div>
+  </footer>
+</body>
+</html>
